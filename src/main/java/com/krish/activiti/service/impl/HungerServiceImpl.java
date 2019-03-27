@@ -18,7 +18,7 @@ import com.krish.activiti.entity.Person;
 import com.krish.activiti.repository.HungerRepository;
 import com.krish.activiti.service.HungerService;
 
-@Service
+@Service("hungerService")
 @Transactional
 public class HungerServiceImpl implements HungerService {
 	
