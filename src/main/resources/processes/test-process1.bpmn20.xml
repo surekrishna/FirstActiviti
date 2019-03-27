@@ -27,9 +27,7 @@
 			</userTask>
 			
 			<sequenceFlow sourceRef="eatTask" targetRef="endHungerTask" />
-			<userTask id="endHungerTask" name="Hunder Ended" activiti:assignee="${person.name}">
-				<documentation> Hunger ended </documentation>
-			</userTask>
+			<serviceTask id="endHungerTask" name="Hunger Ended" activiti:expression="${hungerService.hungerSatisified(execution)}" />
 		
 			<sequenceFlow sourceRef="endHungerTask" targetRef="theEnd" />
 		<endEvent id="theEnd" />
