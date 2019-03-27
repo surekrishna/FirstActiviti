@@ -25,5 +25,7 @@ public interface HungerService {
 	String getAllAssignees();
 	
 	String getAllTaskByProcessInstanceId(String id);
+	
+	void hungerSatisified(DelegateExecution delegateExecution);
 
 }
