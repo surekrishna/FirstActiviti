@@ -126,5 +126,13 @@ public class HungerServiceImpl implements HungerService {
 		}
 		return sBuilder.toString();
 	}
+	
+	@Override
+	public void hungerSatisified(DelegateExecution delegateExecution) {
+		String pInstanceId = delegateExecution.getProcessInstanceId();
+		Person person = hungerRepository.findByProcessInstanceId(pInstanceId);
+				
+		System.out.println("Hunger satisified {} " + person);
+	}
 
 }
