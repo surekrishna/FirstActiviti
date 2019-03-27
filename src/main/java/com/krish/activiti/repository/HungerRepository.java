@@ -7,4 +7,6 @@ import com.krish.activiti.entity.Person;
 public interface HungerRepository extends JpaRepository<Person, Long>{
 
 	Person findByNameIgnoreCase(String name);
+	
+	Person findByProcessInstanceId(String instanceId);
 }
