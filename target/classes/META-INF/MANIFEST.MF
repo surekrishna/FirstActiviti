@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: FirstActiviti
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: krishnababu@bdcvit.com
+Implementation-Vendor-Id: com.krish.activiti
+Build-Jdk: 1.8.0_191
+Implementation-URL: http://projects.spring.io/spring-boot/FirstActivit
+ i/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

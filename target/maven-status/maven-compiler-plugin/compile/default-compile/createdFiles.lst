@@ -1,0 +1,7 @@
+com/krish/activiti/repository/HungerRepository.class
+com/krish/activiti/controller/HungerController.class
+com/krish/activiti/service/HungerService.class
+com/krish/activiti/service/impl/HungerServiceImpl.class
+com/krish/FirstActivitiApplication$1.class
+com/krish/activiti/entity/Person.class
+com/krish/FirstActivitiApplication.class

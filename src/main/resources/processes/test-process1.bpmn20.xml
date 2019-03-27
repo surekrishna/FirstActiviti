@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions
+	xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+	xmlns:activiti="http://activiti.org/bpmn" targetNamespace="Examples">
+	
+	<process id="hungerProcess" name="Hunger Process">
+		<startEvent id="theStart" />
+		
+			<sequenceFlow sourceRef="theStart" targetRef="startHungerTask" />
+			<userTask id="startHungerTask" name="Hunger Started" activiti:assignee="${person.name}">
+				<documentation> Hunger started </documentation>
+			</userTask>
+		
+			<sequenceFlow sourceRef="startHungerTask" targetRef="buyTask" />
+			<userTask id="buyTask" name="Buy Vegitables" activiti:assignee="${person.name}">
+				<documentation> Buying vegitables task </documentation>
+			</userTask>	
+			
+			<sequenceFlow sourceRef="buyTask" targetRef="cookTask"/>
+			<userTask id="cookTask" name="Cook Food" activiti:assignee="${person.name}">
+				<documentation> Cooking the food task </documentation>
+			</userTask>	
+			
+			<sequenceFlow sourceRef="cookTask" targetRef="eatTask" />
+			<userTask id="eatTask" name="Eat Food" activiti:assignee="${person.name}">
+				<documentation> Eating the food task </documentation>
+			</userTask>
+			
+			<sequenceFlow sourceRef="eatTask" targetRef="endHungerTask" />
+			<userTask id="endHungerTask" name="Hunder Ended" activiti:assignee="${person.name}">
+				<documentation> Hunger ended </documentation>
+			</userTask>
+		
+			<sequenceFlow sourceRef="endHungerTask" targetRef="theEnd" />
+		<endEvent id="theEnd" />
+	</process>
+	
+</definitions>
